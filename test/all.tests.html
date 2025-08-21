@@ -1,16 +1,38 @@
-<DOCTYPE html> 
-<html lang="it"> 
-<head> 
-  <meta charset="utf-8"/> 
-  <title>QUnit – All Tests</title> 
-  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css"/> 
-</head> 
-<body> 
-  <div id="qunit"></div> 
-  <div id="qunit-fixture"></div> 
-  <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script> 
-  <script type="module"> 
-    console.log("Qui importeremo tutti i test..."); 
-  </script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>QUnit – Tutti i test 1-Tropea</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <!-- Carico QUnit -->
+  <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
+  <script>QUnit.config.autostart = false;</script>
+
+  <!-- Import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "/1-Tropea/utils/isBrowser.js": "/1-Tropea/utils/isBrowser.js",
+      "/1-Tropea/utils/getTransformSet.js": "/1-Tropea/utils/getTransformSet.js",
+      "/1-Tropea/utils/getTransformValue.js": "/1-Tropea/utils/getTransformValue.js",
+      "/1-Tropea/state.js": "/1-Tropea/state.js"
+    }
+  }
+  </script>
+
+  <!-- Inclusione dei test -->
+  <script type="module" src="/1-Tropea/test/utils/isBrowser.test.js"></script>
+  <script type="module" src="/1-Tropea/test/utils/getTransformSet.test.js"></script>
+  <script type="module" src="/1-Tropea/test/utils/getTransformValue.test.js"></script>
+
+  <script>
+    QUnit.start();
+  </script>
+</body>
+</html>

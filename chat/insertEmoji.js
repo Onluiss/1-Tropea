@@ -1,6 +1,8 @@
 // /chat/insertEmoji.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function insertEmoji(emoji) {
     if (!isBrowser()) return;
     const textInput = document.getElementById('text');

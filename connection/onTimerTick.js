@@ -7,10 +7,8 @@ import { finalSound, countdownSound } from '../constants/constants.js';
 import { autoPlayCard } from '../deck/autoPlayCard.js';
 import { endMyTurn } from '../utils/endMyTurn.js';
 import { updateArc } from '../timer/updateArc.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function onTimerTick({ data = {} }) {
-  try { console.log(getCallerTag()); } catch {}
   const { remaining = null, finished = false, expiry = null } = data;
   if (expiry == null) {
     console.warn("[timer-tick] ignorato: expiry non valido", data);

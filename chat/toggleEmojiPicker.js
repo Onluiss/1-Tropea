@@ -1,4 +1,7 @@
+// chat/toggleEmojiPicker.js
 "use strict";
+
+import { isBrowser } from '../utils/isBrowser.js';
 
 export function toggleEmojiPicker() {
     if (!isBrowser()) return;

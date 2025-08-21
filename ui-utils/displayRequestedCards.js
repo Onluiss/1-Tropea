@@ -1,6 +1,15 @@
 // /ui-utils/displayRequestedCards.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { aggiornaTimerViewerDopoSwap } from '../placeholders/aggiornaTimerViewerDopoSwap.js';
+import { forceDisplayedCard } from '../animations/forceDisplayedCard.js';
+import { updatePlaceholderBars } from '../placeholders/updatePlaceholderBars.js';
+import { getTransformSet } from '../utils/getTransformSet.js';
+import { repositionRemainingCardsForViewer } from '../animations/repositionRemainingCardsForViewer.js';
+import { flipToBackAndTransform } from '../animations/flipToBackAndTransform.js';
+
 export function displayRequestedCards(role, cards) {
   if (!isBrowser()) return;
   if (state.userRole !== 'viewer') return;

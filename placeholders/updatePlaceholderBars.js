@@ -10,11 +10,9 @@ import { getTimerContent } from './getTimerContent.js';
 import { applyPlaceholders } from './applyPlaceholders.js';
 import { updateClockArcs } from '../timer/updateClockArcs.js';
 import { startGlobalTimer } from '../timer/startGlobalTimer.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function updatePlaceholderBars() {
   if (!isBrowser()) return;
-  try { console.log(getCallerTag()); } catch {}
 
   if (state.isBusy || state.isUpdatingPlaceholderBars) return;
 

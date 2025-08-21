@@ -1,6 +1,9 @@
 // connection/onDeckUpdate.js
 "use strict";
 
+import { state } from '../state.js';
+import { renderDeckForCurrentState } from '../deck/renderDeckForCurrentState.js';
+
 export function onDeckUpdate(message) {
   const d = message.data;
   if (!d) return;

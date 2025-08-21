@@ -1,6 +1,9 @@
 // connection/ensureRoleClientIds.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+
 export async function ensureRoleClientIds() {
   if (!isBrowser()) return;
 

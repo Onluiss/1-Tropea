@@ -1,6 +1,9 @@
 // deck/updateBriscolaDisplay.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+
 export function updateBriscolaDisplay() {
   // Protezione SSR / Node
   if (!isBrowser()) return;

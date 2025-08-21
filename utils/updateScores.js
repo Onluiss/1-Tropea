@@ -1,6 +1,9 @@
 // /utils/updateScores.js
 "use strict";
 
+import { isBrowser } from './isBrowser.js';
+import { state } from '../state.js';
+
 export function updateScores(winner, pointsWon) {
   // protezione da ambienti SSR/Node
   if (!isBrowser()) return;

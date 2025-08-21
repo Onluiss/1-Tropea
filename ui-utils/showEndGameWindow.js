@@ -5,17 +5,9 @@ import { state } from '../state.js';
 import { assignUserNumber } from '../utils/assignUserNumber.js';
 import { isBrowser } from '../utils/isBrowser.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export function showEndGameWindow(finalWinner, cPoints = state.creatorPoints, pPoints = state.playerPoints, cGamesWon = state.creatorGamesWon, pGamesWon = state.playerGamesWon) {
   // Protezione SSR/Node
   if (!isBrowser()) return;
-
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
 
   const gameBoard = document.getElementById('game-board');
   if (!gameBoard) return;

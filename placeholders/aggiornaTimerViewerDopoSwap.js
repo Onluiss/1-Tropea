@@ -1,6 +1,12 @@
 // /placeholders/aggiornaTimerViewerDopoSwap.js
 "use strict";
 
+
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { updatePlaceholderBars } from './updatePlaceholderBars.js';
+
+
 export function aggiornaTimerViewerDopoSwap() {
   /* ─────────── GUARDIA SSR ─────────── */
   // Evita esecuzione in ambienti non-browser (Server-Side Rendering o Node)

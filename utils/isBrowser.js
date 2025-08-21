@@ -1,3 +1,4 @@
+// utils/isBrowser.js
 "use strict";
 
 export function isBrowser() {

@@ -1,6 +1,11 @@
 // connection/respondToViewerRequest.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { publishGameState } from '../utils/publishGameState.js';
+import { publishDeckState } from '../deck/publishDeckState.js';
+
 const snapshotSentTo = new Set();
 
 export function respondToViewerRequest(message) {

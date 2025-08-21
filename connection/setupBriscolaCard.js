@@ -7,11 +7,9 @@ import { shuffle } from '../utils/shuffle.js';
 import { cardImages } from '../constants/constants.js';
 import { publish } from '../utils/publish.js';
 import { assignCreatorHand } from '../hand/assignCreatorHand.js';
-import { getCallerTag } from '../callerTag.js';
 
 export async function setupBriscolaCard() {
   if (!isBrowser() || state.gameStarted) return;
-  try { console.log(getCallerTag()); } catch {}
 
   state.roleToClientId = state.roleToClientId || { creator: null, players: [] };
   state.playerHands = state.playerHands || {};

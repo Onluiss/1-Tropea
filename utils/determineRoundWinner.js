@@ -1,7 +1,7 @@
 // utils/determineRoundWinner.js
 "use strict";
 
-import { isBrowser } from "../utils/isBrowser.js";
+import { isBrowser } from "./isBrowser.js";
 import { cardValues } from "../constants/constants.js";
 
 function other(role){ return role === "creator" ? "player" : "creator"; }

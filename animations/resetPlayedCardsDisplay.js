@@ -1,6 +1,8 @@
 // animations/resetPlayedCardsDisplay.js
 'use strict';
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function resetPlayedCardsDisplay() {
   // Protezione SSR / Node
   if (!isBrowser()) return;

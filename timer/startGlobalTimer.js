@@ -4,14 +4,12 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { state } from '../state.js';
 import { nowSync } from '../connection/nowSync.js';
-import { updateClockArcs } from '../timer/updateClockArcs.js';
+import { updateClockArcs } from './updateClockArcs.js';
 import { publish } from '../utils/publish.js';
-import { getCallerTag } from '../callerTag.js';
-
 
 export function startGlobalTimer({ resume = false } = {}) {
   if (!isBrowser()) return;
-  try { console.log(getCallerTag()); } catch {}
+
   /* GUARDIE */
   if (state.turnTimer === 'off' || state.timerInterval) return;
 

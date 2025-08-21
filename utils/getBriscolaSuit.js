@@ -1,6 +1,8 @@
 // /utils/getBriscolaSuit.js
 "use strict";
 
+import { isBrowser } from './isBrowser.js';
+
 export function getBriscolaSuit(briscolaCardName) {
   // protezione da ambienti SSR/Node
   if (!isBrowser()) return;

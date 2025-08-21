@@ -7,9 +7,9 @@ import { updatePlaceholderBars } from '../placeholders/updatePlaceholderBars.js'
 import { state } from "../state.js";
 import { getViewerCardTransform } from '../utils/getViewerCardTransform.js';
 import { playSafe } from '../utils/playSafe.js';
-import { repositionOtherCardsForViewer } from '../animations/repositionOtherCardsForViewer.js';
+import { repositionOtherCardsForViewer } from './repositionOtherCardsForViewer.js';
 import { getTransformValue } from '../utils/getTransformValue.js';
-import { repositionOpponentCards } from '../animations/repositionOpponentCards.js';
+import { repositionOpponentCards } from './repositionOpponentCards.js';
 
 export function displayOpponentCard(playerName, card, cardIndex) {
   if (!isBrowser()) return;

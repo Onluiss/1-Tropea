@@ -1,6 +1,9 @@
 // /utils/publishGameState.js
 "use strict";
 
+import { state } from '../state.js';
+import { getGameStateSnapshot } from './getGameStateSnapshot.js';
+
 export function publishGameState(overrides = {}) {
   if (!state?.ablyChannel) return;
 

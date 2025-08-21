@@ -2,7 +2,6 @@
 
 import { isBrowser } from '../utils/isBrowser.js';
 import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function prepareDeck() {
   if (!isBrowser()) return;
@@ -10,9 +9,6 @@ export function prepareDeck() {
   const doc  = document;
   const root = doc.getElementById('game-board');
   if (!root) return;
-
-  // log di debug
-  try { console.log(getCallerTag()); } catch {}
 
   // idempotenza: se esiste già almeno una .deck-card non creare nulla
   if (root.querySelector('.deck-card')) return;

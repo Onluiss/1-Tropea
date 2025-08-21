@@ -1,5 +1,9 @@
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { publish } from '../utils/publish.js';
+
 export function sendRequestedCards(role, requester) {
   if (!isBrowser()) return;
   

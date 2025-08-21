@@ -1,12 +1,10 @@
 "use strict";
 
 import { isBrowser } from '../utils/isBrowser.js';
-import { getCallerTag } from '../callerTag.js';
-
 
 export function updateArc(arcElement, fraction) {
   if (!isBrowser()) return;
-  try { console.log(getCallerTag()); } catch {}
+
   // clamp [0,1]
   fraction = Math.max(0, Math.min(1, fraction));
 

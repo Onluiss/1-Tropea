@@ -1,20 +1,12 @@
 // /placeholders/renderPlaceholder.js
 "use strict";
 
-const placeholderCache = new Map();   // fuori da tutto
 import { getTimerContent } from './getTimerContent.js';
 import { getAvatarContent } from './getAvatarContent.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
+const placeholderCache = new Map();   // fuori da tutto
 
 export function renderPlaceholder(isTimer, userNum, userName, fallbackHtml) {
-    
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
-
   if (!userName) return fallbackHtml;
 
   const key = `${isTimer}-${userNum}-${userName}`;

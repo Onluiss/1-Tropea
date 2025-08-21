@@ -1,6 +1,9 @@
 // /chat/addMessageReceived.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { replaceEmoticons } from './replaceEmoticons.js';
+
 export function addMessageReceived(newMessageReceived) {
     if (!isBrowser()) return;
     if (!newMessageReceived || !newMessageReceived.text) return;

@@ -1,6 +1,13 @@
 // connection/onCardsDistributed.js
 "use strict";
 
+import { state } from '../state.js';
+import { getTransformSet } from '../utils/getTransformSet.js';
+import { animateCard }         from '../animations/animateCard.js';
+import { riposizionaTutteLeManiPerViewer } from '../animations/riposizionaTutteLeManiPerViewer.js';
+import { findFreeSlotIndex } from '../utils/findFreeSlotIndex.js';
+import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
+
 export function onCardsDistributed(msg) {
   const d = msg.data;
   if (!d) return;

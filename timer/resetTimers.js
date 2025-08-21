@@ -3,10 +3,9 @@
 
 import { state } from '../state.js';
 import { updatePlaceholderBars } from '../placeholders/updatePlaceholderBars.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function resetTimers() {
-  try { console.log(getCallerTag()); } catch {}
+
   // ➤ Se esiste un intervallo attivo, lo azzera
   if (state.timerInterval) {
     clearInterval(state.timerInterval);

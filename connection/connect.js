@@ -28,17 +28,9 @@ import { setupViewerRole } from './setupViewerRole.js';
 import { showEndGameWindow } from '../ui-utils/showEndGameWindow.js';
 import { setupGameFromState } from '../utils/setupGameFromState.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export async function connect() {
   // Se non siamo in un browser, non fare nulla
   if (!isBrowser()) return;
-  
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
 
   // ① Cleanup: se esiste una sessione Ably attiva, chiudila
   if (state.ablyRealtime) {

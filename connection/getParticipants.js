@@ -2,12 +2,9 @@
 "use strict";
 
 import { assignUserNumber } from '../utils/assignUserNumber.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function getParticipants(members) {
-    
-  try { console.log(getCallerTag()); } catch {}
-  
+
   // Filtro i membri per ruolo (creatore o giocatore)
   const players = members
     .filter(m => m.data?.role && ['player', 'creator'].includes(m.data.role.toLowerCase()));

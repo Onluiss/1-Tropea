@@ -1,6 +1,8 @@
 // /chat/limitTextLength.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function limitTextLength(event, maxLength) {
     if (!isBrowser()) return;
     const textContainer = document.getElementById('text');

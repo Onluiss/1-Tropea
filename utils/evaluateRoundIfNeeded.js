@@ -1,23 +1,21 @@
 // /utils/evaluateRoundIfNeeded.js
 "use strict";
 
-import { isBrowser } from '../utils/isBrowser.js';
+import { isBrowser } from './isBrowser.js';
 import { state } from "../state.js";
-import { getBriscolaSuit } from '../utils/getBriscolaSuit.js';
-import { determineRoundWinner } from '../utils/determineRoundWinner.js';
-import { calculatePoints } from '../utils/calculatePoints.js';
-import { updateScores } from '../utils/updateScores.js';
+import { getBriscolaSuit } from './getBriscolaSuit.js';
+import { determineRoundWinner } from './determineRoundWinner.js';
+import { calculatePoints } from './calculatePoints.js';
+import { updateScores } from './updateScores.js';
 import { resetTimers } from '../timer/resetTimers.js';
-import { startMyTurn } from '../utils/startMyTurn.js';
-import { endMyTurn } from '../utils/endMyTurn.js';
-import { setBusy } from '../utils/setBusy.js';
+import { startMyTurn } from './startMyTurn.js';
+import { endMyTurn } from './endMyTurn.js';
+import { setBusy } from './setBusy.js';
 import { animateWinningCards } from '../animations/animateWinningCards.js';
-import { clearBusy } from '../utils/clearBusy.js';
-import { getCallerTag } from "../callerTag.js";
+import { clearBusy } from './clearBusy.js';
 
 export function evaluateRoundIfNeeded() {
   if (!isBrowser()) return;
-  try { console.log(getCallerTag()); } catch {}
 
   const { creatorPlayedCard, playerPlayedCard } = state;
   if (!creatorPlayedCard || !playerPlayedCard) return;

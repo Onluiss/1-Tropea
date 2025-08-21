@@ -1,6 +1,9 @@
 // animations/forceDisplayedCard.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+
 export function forceDisplayedCard(role, cardName, cardIndex = 0) {
     // console.log(`forceDisplayedCard ← Chiamata da ${getCallerTag()}`);
   // Protezione SSR / Node

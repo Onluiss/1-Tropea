@@ -4,18 +4,9 @@
 import { state } from '../state.js';
 import { respondToViewerRequest } from './respondToViewerRequest.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 const respondedTo = new Set();
 
 export function onRequestCurrentDeck(msg) {
-    
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
-
   const r = msg?.data?.requester;
   if (!r || respondedTo.has(r)) return;
   if (state.isBusy) {

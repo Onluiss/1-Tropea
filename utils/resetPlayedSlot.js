@@ -1,13 +1,10 @@
 // /utils/resetPlayedSlot.js
 "use strict";
 
-import { isBrowser } from '../utils/isBrowser.js';
-import { getCallerTag } from '../callerTag.js';
+import { isBrowser } from './isBrowser.js';
 
 export function resetPlayedSlot(slot, { keepVisible = false } = {}) {
   if (!isBrowser() || !slot) return;
-
-  try { console.log(getCallerTag()); } catch {}
 
   if (!keepVisible) {
     slot.style.display = 'none';

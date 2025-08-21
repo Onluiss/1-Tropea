@@ -1,5 +1,7 @@
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function setupImageErrorHandlers(fbSrc='/carte-napoletane/asssss.png',fbAlt='Image Not Available') {
   if (!isBrowser()) return;
   document.querySelectorAll('img').forEach(img=>{

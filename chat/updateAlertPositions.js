@@ -1,4 +1,8 @@
+// chat/updateAlertPositions.js
 "use strict";
+
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
 
 export function updateAlertPositions() {
   if (!isBrowser()) return;

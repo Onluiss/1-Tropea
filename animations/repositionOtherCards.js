@@ -1,6 +1,9 @@
 // animations/repositionOtherCards.js
 'use strict';
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { getTransformSet } from '../utils/getTransformSet.js';
+
 export function repositionOtherCards(role, cardNumber) {
   if (!isBrowser()) return;
 

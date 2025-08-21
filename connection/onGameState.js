@@ -1,6 +1,9 @@
 // connection/onGameState.js
 "use strict";
 
+import { state } from '../state.js';
+import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
+
 export function onGameState(message) {
   const data = message.data;                // Estraggo il payload dal messaggio
   if (!data) return;                        // Se non c’è data, esco

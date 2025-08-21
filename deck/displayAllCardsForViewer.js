@@ -1,6 +1,10 @@
 // deck/displayAllCardsForViewer.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { getTransformSet } from '../utils/getTransformSet.js';
+
 export function displayAllCardsForViewer() {
 // console.log(`displayAllCardsForViewer ← Chiamata da ${getCallerTag()}`);
   // Protezione SSR / Node

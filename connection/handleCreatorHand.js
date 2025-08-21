@@ -5,16 +5,7 @@ import { state } from '../state.js';
 import { assignCreatorHand } from '../hand/assignCreatorHand.js';
 import { publishDeckState } from '../deck/publishDeckState.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export async function handleCreatorHand(message) {
-    
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
-
   if (message.data?.playerName !== state.userName) return;
   await assignCreatorHand(message.data.hand);
   publishDeckState();

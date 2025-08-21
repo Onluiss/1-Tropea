@@ -1,6 +1,8 @@
 // animations/flipToBackAndTransform.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function flipToBackAndTransform(wrapper, transform, ruolo = 'Player', force = false) {
   // questa non accede a window/document, ma tocca il DOM
   if (!isBrowser()) return;

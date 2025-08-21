@@ -1,13 +1,9 @@
 // /hand/setupCardElements.js
 "use strict";
 
-import { handleCardClick } from '../hand/handleCardClick.js';
-import { getCallerTag } from '../callerTag.js';
+import { handleCardClick } from './handleCardClick.js';
 
 export function setupCardElements(cards) {
-
-  try { console.log(getCallerTag()); } catch {}
-  
   cards.forEach((cardEl, idx) => {
     cardEl.classList.add('my-card');
     cardEl.dataset.cardNumber = String(idx + 1);

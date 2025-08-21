@@ -1,6 +1,8 @@
 // /chat/insertAtCaret.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function insertAtCaret(elementId, html) {
     if (!isBrowser()) return;
     const element = document.getElementById(elementId);

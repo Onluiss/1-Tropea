@@ -17,16 +17,9 @@ import { updateHandSlotsDisplay } from '../hand/updateHandSlotsDisplay.js';
 import { startMyTurn } from './startMyTurn.js';
 import { endMyTurn } from './endMyTurn.js';
 import { initializeMyCards } from '../hand/initializeMyCards.js';
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
 
 export async function setupGameFromState() {
   if (!isBrowser()) return;
-
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
 
   /* Stop immediato se già effettuato o manca lo snapshot */
   if (state.initialGameSetupDone || !window.gameStateMessage) {

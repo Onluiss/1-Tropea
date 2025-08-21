@@ -1,13 +1,10 @@
 // /utils/findFreeSlotIndex.js
 "use strict";
 
-import { isBrowser } from '../utils/isBrowser.js';
-import { getCallerTag } from '../callerTag.js';
+import { isBrowser } from './isBrowser.js';
 
 export function findFreeSlotIndex(cardPlaceholders) {
   if (!isBrowser()) return -1;
-
-  try { console.log(getCallerTag()); } catch {}
 
   const list = Array.from(cardPlaceholders || []);
   if (!list.length) return -1;

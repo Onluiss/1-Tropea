@@ -1,6 +1,11 @@
 // /utils/endGame.js
 "use strict";
 
+import { state } from '../state.js';
+import { publish } from './publish.js';
+import { showEndGameWindow } from '../ui-utils/showEndGameWindow.js';
+import { handleDrawScenario } from './handleDrawScenario.js';
+
 export function endGame() {
   let finalWinner = '';
   if (state.creatorPoints > state.playerPoints) {

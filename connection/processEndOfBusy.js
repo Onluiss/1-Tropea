@@ -5,14 +5,12 @@ import { isBrowser } from "../utils/isBrowser.js";
 import { state } from "../state.js";
 import { clearBusy } from "../utils/clearBusy.js";
 import { updatePlaceholderBars } from "../placeholders/updatePlaceholderBars.js";
-import { respondToViewerRequest } from "../connection/respondToViewerRequest.js";
+import { respondToViewerRequest } from "./respondToViewerRequest.js";
 import { publishGameState } from "../utils/publishGameState.js";
-import { getCallerTag } from "../callerTag.js";
 
 export function processEndOfBusy() {
   if (!isBrowser() || state.busyUnwinding) return;
 
-  try { console.log(getCallerTag()); } catch {}
   state.busyUnwinding = true;
 
   // reset click-lock

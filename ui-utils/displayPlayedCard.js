@@ -1,6 +1,10 @@
 // /ui-utils/displayPlayedCard.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { forceDisplayedCard } from '../animations/forceDisplayedCard.js';
+import { repositionOtherCardsForViewer } from '../animations/repositionOtherCardsForViewer.js';
+
 export function displayPlayedCard(role, card, index) {
   // Protezione SSR / Node
   if (!isBrowser()) return;

@@ -5,20 +5,12 @@ import { isBrowser } from '../utils/isBrowser.js';
 import { state } from '../state.js';
 import { getTransformSet } from '../utils/getTransformSet.js';
 import { publish } from '../utils/publish.js';
-import { initializeMyCards } from '../hand/initializeMyCards.js';
+import { initializeMyCards } from './initializeMyCards.js';
 import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
-
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
 
 export async function assignCreatorHand(hand) {
   if (!isBrowser()) return;
   if (state.userRole !== 'creator') return;
-  
-//////////////////////////////////////////////////////////////
-try { console.log(getCallerTag()); } catch {}
-//////////////////////////////////////////////////////////////
 
   // Setup base
   state.playerHands = state.playerHands || {};

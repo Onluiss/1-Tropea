@@ -1,5 +1,10 @@
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { updateAlertPositions } from './updateAlertPositions.js';
+import { closeAlert } from '../ui-utils/closeAlert.js';
+
 export function showAlert(alertId) {
   if (!isBrowser()) return;
   const alertContainer = document.getElementById('alert-container');

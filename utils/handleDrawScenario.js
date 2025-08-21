@@ -1,6 +1,12 @@
 // /utils/handleDrawScenario.js
 "use strict";
 
+import { isBrowser } from './isBrowser.js';
+import { state } from '../state.js';
+import { assignUserNumber } from './assignUserNumber.js';
+import { resetGameForNewRound } from '../connection/resetGameForNewRound.js';
+
+
 export function handleDrawScenario() {
   // 1️⃣ Protezione SSR / Node
   if (!isBrowser()) return;

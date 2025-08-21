@@ -1,12 +1,12 @@
 // deck/renderDeckForCurrentState.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
+
 export function renderDeckForCurrentState() {
   if (!isBrowser()) return;
-
-  console.log(`${getCallerTag()} → renderDeckForCurrentState`, {
-    deckIndex: state.deckIndex
-  });
 
   const cards = document.querySelectorAll('.deck-card');
   let shown = 0, hidden = 0;

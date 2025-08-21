@@ -5,7 +5,7 @@ import { isBrowser } from '../utils/isBrowser.js';
 import { state } from "../state.js";
 import { setBusy } from '../utils/setBusy.js';
 import { playSafe } from '../utils/playSafe.js';
-import { animateCardsOut } from '../animations/animateCardsOut.js';
+import { animateCardsOut } from './animateCardsOut.js';
 import { isMyTurn } from '../utils/isMyTurn.js';
 import { enableMyCards } from '../hand/enableMyCards.js';
 import { disableMyCards } from '../hand/disableMyCards.js';
@@ -18,11 +18,8 @@ import { publish } from '../utils/publish.js';
 import { assignSinglePlayerCard } from '../hand/assignSinglePlayerCard.js';
 import { checkForGameEnd } from '../utils/checkForGameEnd.js';
 
-import { getCallerTag } from "../callerTag.js";
-
 export async function animateWinningCards(winner, playedCards) {
   if (!isBrowser()) return;
-  try { console.log(getCallerTag()); } catch {}
 
   // 1) Rimuovo le carte giocate dallo stato, con guardia su undefined
   if (typeof state.creatorPlayedIndex === 'number') {

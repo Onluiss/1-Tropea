@@ -1,6 +1,10 @@
 // /hand/updateHandSlotsDisplay.js
 'use strict';
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { applyHandLayoutForRemainingCards } from './applyHandLayoutForRemainingCards.js';
+
 export function updateHandSlotsDisplay(role, clientId) {
   // Protezione SSR / Node
   if (!isBrowser()) return;

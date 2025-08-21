@@ -1,7 +1,7 @@
 // /utils/getTransformValue.js
 "use strict";
 
-import { isBrowser } from '../utils/isBrowser.js';
+import { isBrowser } from './isBrowser.js';
 import { state } from "../state.js";
 
 export function getTransformValue(cardNumber, role, isOwnCard) {

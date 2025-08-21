@@ -4,14 +4,10 @@ import { isBrowser } from '../utils/isBrowser.js';
 import { resetPlayedSlot } from '../utils/resetPlayedSlot.js';
 import { state } from "../state.js";
 
-import { getCallerTag } from "../callerTag.js";
-
 export function animateCardsOut(playedCardElements, translateDirection, callback) {
   // Se non siamo in un browser, esci immediatamente
   if (!isBrowser()) return;
-  
-  try { console.log(getCallerTag()); } catch {}
-  
+
   // Se non ci sono elementi o l’array è vuoto, esegui il callback e restituisci una Promise risolta
   if (!playedCardElements || playedCardElements.length === 0) {
     if (callback) callback();

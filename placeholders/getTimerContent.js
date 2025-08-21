@@ -1,11 +1,7 @@
 // /placeholders/getTimerContent.js
 "use strict";
 
-import { getCallerTag } from '../callerTag.js';
-
 export function getTimerContent(userNumber, userName) {
-  try { console.log(getCallerTag()); } catch {}
-  
   return `
   <div class="placeholder-info">
     <div class="placeholder-timer">

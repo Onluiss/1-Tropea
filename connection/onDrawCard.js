@@ -1,6 +1,10 @@
 // connection/onDrawCard.js
 "use strict";
 
+import { state } from '../state.js';
+import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
+import { findFreeSlotIndex } from '../utils/findFreeSlotIndex.js';
+
 export function onDrawCard(msg) {
   const { role, card } = msg.data || {};
   if (role !== state.userRole || !card) return;

@@ -1,6 +1,10 @@
 // connection/requestCards.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { publish } from '../utils/publish.js';
+
 export function requestCards(role) {
   if (!isBrowser()) return;
   

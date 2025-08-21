@@ -1,6 +1,8 @@
 // /utils/getGameStateSnapshot.js
 "use strict";
 
+import { state } from '../state.js';
+
 export function getGameStateSnapshot() {
   // 👉 deep-clone di array/oggetti che potresti mutare in seguito
   const clone = JSON.parse(JSON.stringify({

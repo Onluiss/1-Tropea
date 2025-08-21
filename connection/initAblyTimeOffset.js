@@ -1,6 +1,8 @@
 // connection/initAblyTimeOffset.js
 "use strict";
 
+import { state } from '../state.js';
+
 export async function initAblyTimeOffset() {
   return new Promise(resolve => {
     // se l’istanza non è pronta, abort (evita crash in SSR)

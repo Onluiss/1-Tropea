@@ -1,6 +1,12 @@
 // connection/onResetGame.js
 "use strict";
 
+import { state } from '../state.js';
+import { startMyTurn } from '../utils/startMyTurn.js';
+import { endMyTurn } from '../utils/endMyTurn.js';
+import { prepareDeck } from '../deck/prepareDeck.js';
+import { setupBriscolaCard } from './setupBriscolaCard.js';
+
 export function onResetGame() {
   window.gameStateMessage = null;
 

@@ -4,7 +4,7 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { setBusy } from '../utils/setBusy.js';
 import { state } from '../state.js';
-import { initializeMyCards } from '../hand/initializeMyCards.js';
+import { initializeMyCards } from './initializeMyCards.js';
 import { processEndOfBusy } from '../connection/processEndOfBusy.js';
 import { checkForGameEnd } from '../utils/checkForGameEnd.js';
 import { clearBusy } from '../utils/clearBusy.js';
@@ -16,11 +16,8 @@ import { animateCard } from '../animations/animateCard.js';
 import { riposizionaLaMiaMano } from '../animations/riposizionaLaMiaMano.js';
 import { riposizionaTutteLeMani } from '../animations/riposizionaTutteLeMani.js';
 
-import { getCallerTag } from '../callerTag.js';
-
 export async function assignSingleCard(role, animate = true) {
   if (!isBrowser()) return null;
-  try { console.log(getCallerTag()); } catch {}
 
   let card = null;
   try {

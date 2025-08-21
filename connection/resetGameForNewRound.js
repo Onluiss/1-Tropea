@@ -1,6 +1,11 @@
 // connection/resetGameForNewRound.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { publish } from '../utils/publish.js';
+import { state } from '../state.js';
+import { triggerRestart } from './triggerRestart.js';
+
 export function resetGameForNewRound() {
   if (!isBrowser()) return;
 

@@ -6,17 +6,9 @@ import { state } from '../state.js';
 import { setupGameFromState } from '../utils/setupGameFromState.js';
 import { setupBriscolaCard } from '../connection/setupBriscolaCard.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export function distributeCards() {
   // Protezione per ambienti senza DOM
   if (!isBrowser()) return;
-
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
 
   // Se il setup iniziale è già stato eseguito, termina subito
   if (state.initialGameSetupDone) {

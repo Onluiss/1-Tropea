@@ -1,5 +1,7 @@
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function scrollToEnd() {
     if (!isBrowser()) return;
   // Seleziona il contenitore della chat

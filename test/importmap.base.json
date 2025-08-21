@@ -1,0 +1,6 @@
+{ 
+  "imports": { 
+    "/1-Tropea/state.js": "/1-Tropea/test/stubs/state.stub.js", 
+    "/1-Tropea/utils/isBrowser.js": "/1-Tropea/test/stubs/isBrowser.stub.js" 
+  } 
+} 

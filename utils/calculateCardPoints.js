@@ -1,6 +1,8 @@
 // /utils/calculateCardPoints.js
 "use strict";
 
+import { isBrowser } from './isBrowser.js';
+
 export function calculateCardPoints(cardName) {
   if (!isBrowser()) return;
   const numberPart = cardName.split('-')[0];

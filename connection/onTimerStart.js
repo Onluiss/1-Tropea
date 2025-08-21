@@ -2,12 +2,9 @@
 "use strict";
 
 import { state } from "../state.js";
-import { nowSync } from "../connection/nowSync.js";
-import { getCallerTag } from "../callerTag.js";
+import { nowSync } from "./nowSync.js";
 
 export function onTimerStart({ data = {} }) {
-  try { console.log(getCallerTag()); } catch {}
-
   const expiry = data && data.expiry;
   if (!Number.isFinite(expiry)) {
     console.error("timer-start senza expiry valido, esco");

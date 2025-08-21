@@ -2,23 +2,20 @@
 'use strict';
 
 import { isBrowser } from '../utils/isBrowser.js';
-import { isHandEmpty } from '../hand/isHandEmpty.js';
-import { getMyCardElements } from '../hand/getMyCardElements.js';
-import { setupCardElements } from '../hand/setupCardElements.js';
+import { isHandEmpty } from './isHandEmpty.js';
+import { getMyCardElements } from './getMyCardElements.js';
+import { setupCardElements } from './setupCardElements.js';
 import { isMyTurn } from '../utils/isMyTurn.js';
-import { hasAlreadyPlayed } from '../hand/hasAlreadyPlayed.js';
-import { enableMyCards } from '../hand/enableMyCards.js';
+import { hasAlreadyPlayed } from './hasAlreadyPlayed.js';
+import { enableMyCards } from './enableMyCards.js';
 import { playSafe } from '../utils/playSafe.js';
 import { state } from '../state.js';
-import { disableMyCards } from '../hand/disableMyCards.js';
+import { disableMyCards } from './disableMyCards.js';
 import { updatePlaceholderBars } from '../placeholders/updatePlaceholderBars.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function initializeMyCards() {
   // 1) Early exit
   if (!isBrowser() || isHandEmpty()) return;
-
-  try { console.log(getCallerTag()); } catch {}
 
   // 2) NodeList → Array con guardia
   const nodes = getMyCardElements() || [];

@@ -1,6 +1,6 @@
 // /utils/getViewerCardTransform.js
 "use strict";
-import { isBrowser } from '../utils/isBrowser.js';
+import { isBrowser } from './isBrowser.js';
 
 export function getViewerCardTransform(role, placeholdersSwapped) {
   if (!isBrowser()) return "";

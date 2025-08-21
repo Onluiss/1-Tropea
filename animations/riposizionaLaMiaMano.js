@@ -3,7 +3,6 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { state } from '../state.js';
 import { getTransformSet } from '../utils/getTransformSet.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function riposizionaLaMiaMano(ruolo) {
   if (!isBrowser()) return 0;
@@ -13,8 +12,6 @@ export function riposizionaLaMiaMano(ruolo) {
     try { console.warn('[riposizionaLaMiaMano] ruolo non valido:', ruolo); } catch {}
     return 0;
   }
-
-  try { console.log(getCallerTag?.() || '[riposizionaLaMiaMano]'); } catch {}
 
   const selettoriCarte = role === 'creator'
     ? ['.creator-card1', '.creator-card2', '.creator-card3']

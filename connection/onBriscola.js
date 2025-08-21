@@ -1,6 +1,10 @@
 // connection/onBriscola.js
 "use strict";
 
+import { state } from '../state.js';
+import { displayAllCardsForViewer } from '../deck/displayAllCardsForViewer.js';
+import { publishDeckState } from '../deck/publishDeckState.js';
+
 export function onBriscola(msg) {
   state.briscolaImage = msg.data.card;
   state.shuffledCards = msg.data.shuffledDeck;

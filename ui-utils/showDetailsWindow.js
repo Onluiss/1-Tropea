@@ -6,16 +6,8 @@ import { state } from '../state.js';
 import { distributeCards } from '../deck/distributeCards.js';
 import { assignUserNumber } from '../utils/assignUserNumber.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export function showDetailsWindow() {
   if (!isBrowser()) return;
-
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
 
   if (state.gameStarted || window.gameStateMessage) {
     distributeCards();
@@ -24,11 +16,6 @@ console.log(getCallerTag());
 
   // callback nominata
   function handlePresence(err, members) {
-
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
-
     if (err) {
       setTimeout(() => state.ablyChannel.presence.get(handlePresence), 250);
       return;

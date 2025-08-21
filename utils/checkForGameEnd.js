@@ -1,18 +1,14 @@
 // /utils/checkForGameEnd.js
 "use strict";
 
-import { isBrowser } from '../utils/isBrowser.js';
+import { isBrowser } from './isBrowser.js';
 import { state } from '../state.js';
-import { resetPlayedSlot } from '../utils/resetPlayedSlot.js';
-import { endGame } from '../utils/endGame.js';
-
-import { getCallerTag } from '../callerTag.js';
+import { resetPlayedSlot } from './resetPlayedSlot.js';
+import { endGame } from './endGame.js';
 
 export function checkForGameEnd() {
   if (!isBrowser()) return;
 
-  try { console.log(getCallerTag()); } catch {}
-  
   const deckEmpty = (state.deckIndex <= 0 && state.briscolaDrawn);
   let creatorHandEmpty = true;
   let playerHandEmpty  = true;

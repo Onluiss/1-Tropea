@@ -1,6 +1,14 @@
 // /chat/initializeChat.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { fetchChatHistory } from './fetchChatHistory.js';
+import { handleKeyPress } from './handleKeyPress.js';
+import { handlePaste } from './handlePaste.js';
+import { limitTextLength } from './limitTextLength.js';
+import { toggleEmojiPicker } from './toggleEmojiPicker.js';
+import { attachEmojiEventListeners } from './attachEmojiEventListeners.js';
+
 export function initializeChat() {
   if (!isBrowser()) return;
   fetchChatHistory();

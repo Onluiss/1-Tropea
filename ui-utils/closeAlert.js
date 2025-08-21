@@ -1,6 +1,10 @@
 // /alerts/closeAlert.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { updateAlertPositions } from '../chat/updateAlertPositions.js';
+
 export function closeAlert(alertId) {
   if (!isBrowser()) return;
   const el = document.getElementById(alertId);

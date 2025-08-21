@@ -5,16 +5,7 @@ import { state } from '../state.js';
 import { assignUserNumber } from '../utils/assignUserNumber.js';
 import { renderPlaceholder } from './renderPlaceholder.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export function buildUserPlaceholders({ creatorName, creatorNum, playerName, playerNum }) {
-    
-//////////////////////////////////////////////////////////////
-  try { console.log(getCallerTag()); } catch {}
-//////////////////////////////////////////////////////////////
-
   const isCreator = state.userName === creatorName;
   const isPlayer  = state.userName === playerName;
 

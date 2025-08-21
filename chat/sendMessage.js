@@ -1,5 +1,9 @@
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { replaceEmoticons } from './replaceEmoticons.js';
+import { state } from '../state.js';
+
 export function sendMessage() {
   if (!isBrowser()) return;
   const txt = document.getElementById('text');

@@ -1,5 +1,7 @@
 "use strict";
 
+import { state } from '../state.js';
+
 export function replaceEmoticons(text) {
     return text.replace(/:\)|:\(|:D|:S|B\)|:P|:p|;\)|:-\)|:-\(|:-D|:-S|:-P|:-p|:-O|:-o|:-\*|:\*|:\||:-\||:O|:o|:\]|:\[|:@|:X|:x|:-X|:-x|:Z|:z|:-Z|:-z|:\$|:-\$|;P|;p|:\/|:-\/|:\\|:-\\|>:\(|>:-\(|:3|:>|>:D|>:-D|>:o|>:-o|O:\)|O:-\)|o:\)|o:-\)|:C|:-C|:c|:-c|X\(|X-\(|x\(|x-\(|:,|D:|8\)|8-\)|B-\)|B\)|B-D|BD|:L|:-L|:l|:-l|B-\(|:\?|:-\?|:B|:b|:\^\)|<3|<\/3/g, match => {
         const emojiCode = state.emoticons[match];

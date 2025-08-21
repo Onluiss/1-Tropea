@@ -1,6 +1,10 @@
 // animations/repositionRemainingCardsForViewer.js
 'use strict';
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { state } from '../state.js';
+import { getTransformSet } from '../utils/getTransformSet.js';
+
 export function repositionRemainingCardsForViewer(role) {
   if (!isBrowser()) return;
 

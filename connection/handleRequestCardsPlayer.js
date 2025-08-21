@@ -1,6 +1,11 @@
 // connection/handleRequestCardsPlayer.js
 "use strict";
 
+import { state } from '../state.js';
+import { sendRequestedCards } from '../chat/sendRequestedCards.js';
+import { publish } from '../utils/publish.js';
+import { showConfirmationAlert } from '../chat/showConfirmationAlert.js';
+
 export function handleRequestCardsPlayer(message) {
   const { role, requester } = message.data ?? {};
   if (state.userRole !== 'player' || role !== 'player') return;

@@ -4,7 +4,6 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { prepareDeck } from './prepareDeck.js';
 import { playAudioAndStartAnimations } from '../connection/playAudioAndStartAnimations.js';
-import { getCallerTag } from '../callerTag.js';
 
 export function initializeDeckForRole() {
   if (!isBrowser()) return;
@@ -14,7 +13,6 @@ export function initializeDeckForRole() {
 
   // esegui solo se il mazzo non esiste nel board
   if (!root.querySelector('.deck-card')) {
-    try { console.log(getCallerTag()); } catch {}
 
     try { prepareDeck(); } catch {}
     try { playAudioAndStartAnimations(); } catch {}

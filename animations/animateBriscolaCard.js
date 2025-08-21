@@ -4,10 +4,6 @@
 import { state } from '../state.js';
 import { isBrowser } from '../utils/isBrowser.js';
 
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
-
 export async function animateBriscolaCard() {
   if (!isBrowser()) return;
   // Seleziona l'elemento DOM che contiene la carta

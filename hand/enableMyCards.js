@@ -4,13 +4,9 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { state } from '../state.js';
 
-import { getCallerTag } from '../callerTag.js';
-
 export function enableMyCards() {
   if (!isBrowser()) return;
 
-  try { console.log(getCallerTag()); } catch {}
-  
   document.querySelectorAll('.my-card').forEach(card => {
     card.style.pointerEvents = 'auto';
     card.classList.remove('card-disabled');

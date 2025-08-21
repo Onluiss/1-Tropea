@@ -1,4 +1,4 @@
-// index.js
+// initialize.js
 "use strict";
 
 import { isBrowser } from './utils/isBrowser.js';

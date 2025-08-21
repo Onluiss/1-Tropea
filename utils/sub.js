@@ -2,18 +2,9 @@
 "use strict";
 
 import { state } from '../state.js';
-import { legacySub } from '../utils/legacySub.js';
-
-//////////////////////////////////////////////////////////////
-import { getCallerTag } from '../callerTag.js';
-//////////////////////////////////////////////////////////////
+import { legacySub } from './legacySub.js';
 
 export function sub(...args) {
-    
-//////////////////////////////////////////////////////////////
-console.log(getCallerTag());
-//////////////////////////////////////////////////////////////
-
   /* ► Nuova firma: (eventName, handler, flag[, channel]) */
   if (typeof args[0] === 'string') {
     const [event, cb, flag, channel = state.ablyChannel] = args;

@@ -2,13 +2,9 @@
 "use strict";
 
 import { state } from '../state.js';
-import { renderPlaceholder } from '../placeholders/renderPlaceholder.js';
-import { getCallerTag } from '../callerTag.js';
+import { renderPlaceholder } from './renderPlaceholder.js';
 
 export function buildViewerPlaceholders({ creatorName, creatorNum, playerName, playerNum }) {
-    
-  try { console.log(getCallerTag()); } catch {}
-  
   const roleOrder = state.placeholdersSwapped
     ? ['player', 'creator']
     : ['creator', 'player'];

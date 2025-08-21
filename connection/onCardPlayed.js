@@ -8,13 +8,10 @@ import { setBusy } from "../utils/setBusy.js";
 import { startMyTurn } from "../utils/startMyTurn.js";
 import { playSafe } from "../utils/playSafe.js";
 import { enableMyCards } from "../hand/enableMyCards.js";
-import { processEndOfBusy } from "../connection/processEndOfBusy.js";
+import { processEndOfBusy } from "./processEndOfBusy.js";
 import { evaluateRoundIfNeeded } from "../utils/evaluateRoundIfNeeded.js";
-import { getCallerTag } from "../callerTag.js";
 
 export function onCardPlayed(msg) {
-  try { console.log(getCallerTag()); } catch {}
-
   if (!msg || !msg.data) return;
   const { playerName, role, cardIndex, card } = msg.data;
   if (role !== "creator" && role !== "player") return;

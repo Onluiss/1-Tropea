@@ -2,12 +2,11 @@
 
 import { isBrowser } from '../utils/isBrowser.js';
 import { state } from '../state.js';
-import { updateArc } from '../timer/updateArc.js';
-import { getCallerTag } from '../callerTag.js';
+import { updateArc } from './updateArc.js';
 
 export function updateClockArcs() {
   if (!isBrowser()) return;
-  try { console.log(getCallerTag()); } catch {}
+
   const frac = Math.max(
     0,
     Math.min(1, (state.timerRemaining ?? state.timer_duration_secs) / state.arc_full_secs)

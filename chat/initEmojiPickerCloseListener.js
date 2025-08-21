@@ -1,6 +1,8 @@
 // /chat/initEmojiPickerCloseListener.js
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+
 export function initEmojiPickerCloseListener() {
     if (!isBrowser()) return;
   document.addEventListener('click', function(event) {

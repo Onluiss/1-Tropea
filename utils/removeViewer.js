@@ -1,6 +1,8 @@
 // /utils/removeViewer.js
 "use strict";
 
+import { state } from '../state.js';
+
 export function removeViewer(username) {
   if (username === state.userName) {
     // Protezione SSR / Node

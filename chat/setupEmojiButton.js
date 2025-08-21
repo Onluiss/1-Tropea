@@ -1,5 +1,8 @@
 "use strict";
 
+import { isBrowser } from '../utils/isBrowser.js';
+import { toggleEmojiPicker } from './toggleEmojiPicker.js';
+
 export function setupEmojiButton(sel='#emoji-button') {
   if (!isBrowser()) return;
   const btn = document.querySelector(sel);

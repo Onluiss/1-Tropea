@@ -1,4 +1,7 @@
+// chat/showCategory.js
 "use strict";
+
+import { isBrowser } from '../utils/isBrowser.js';
 
 export function showCategory(category) {
     if (!isBrowser()) return;

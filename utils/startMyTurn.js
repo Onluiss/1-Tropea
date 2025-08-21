@@ -3,12 +3,7 @@
 
 import { state } from "../state.js";
 
-import { getCallerTag } from "../callerTag.js";
-
 export function startMyTurn() {
-    
-  try { console.log(getCallerTag()); } catch {}
-  
   state.isMyTurn = true;
 }
 

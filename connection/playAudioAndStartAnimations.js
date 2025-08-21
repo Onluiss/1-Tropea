@@ -10,13 +10,9 @@ import { setupTextInput } from '../chat/setupTextInput.js';
 import { setupEmojiButton } from '../chat/setupEmojiButton.js';
 import { loadEmojiPicker } from '../chat/loadEmojiPicker.js';
 import { setupImageErrorHandlers } from '../chat/setupImageErrorHandlers.js';
-import { getCallerTag } from '../callerTag.js';
 
 export async function playAudioAndStartAnimations() {
   if (!isBrowser()) return null;
-
-  // log di debug
-  try { console.log(getCallerTag()); } catch {}
 
   // prevenzione doppio bootstrap
   const st = (window.state = window.state || state);

@@ -5,13 +5,11 @@ import { state } from '../state.js';
 import { isBrowser } from '../utils/isBrowser.js';
 import { ensureTalonCounter } from './ensureTalonCounter.js';
 
-import { getCallerTag } from '../callerTag.js';
-
 export function updateTalonCounter() {
   if (!isBrowser()) return;
 
   const board = document.getElementById('game-board');
-  try { console.log(getCallerTag()); } catch {}
+
   if (!board) return;
 
   const counter = ensureTalonCounter();

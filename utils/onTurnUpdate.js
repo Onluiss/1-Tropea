@@ -1,6 +1,10 @@
 // /utils/onTurnUpdate.js
 "use strict";
 
+import { state } from '../state.js';
+import { resetTimers } from '../timer/resetTimers.js';
+import { startGlobalTimer } from '../timer/startGlobalTimer.js';
+
 export function onTurnUpdate(newTurn) {
   if (newTurn === state.currentTurn) return;  // ❌ nessun vero cambio
 

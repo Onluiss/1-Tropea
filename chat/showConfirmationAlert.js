@@ -1,4 +1,11 @@
+// chat/showConfirmationAlert.js
 "use strict";
+
+import { isBrowser } from '../utils/isBrowser.js';
+import { assignUserNumber } from '../utils/assignUserNumber.js';
+import { state } from '../state.js';
+import { closeAlert } from '../ui-utils/closeAlert.js';
+import { playSafe } from '../utils/playSafe.js';
 
 export function showConfirmationAlert(message, onAccept, onReject) {
   if (!isBrowser()) return;

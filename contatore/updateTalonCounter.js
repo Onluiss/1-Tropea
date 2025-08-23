@@ -4,10 +4,11 @@
 import { state } from '../state.js';
 import { isBrowser } from '../utils/isBrowser.js';
 import { ensureTalonCounter } from './ensureTalonCounter.js';
+import { getCallerTag } from '../callerTag.js';
 
 export function updateTalonCounter() {
   if (!isBrowser()) return;
-
+  try { console.log(getCallerTag()); } catch {}
   const board = document.getElementById('game-board');
 
   if (!board) return;

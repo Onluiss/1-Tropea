@@ -4,10 +4,11 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { prepareDeck } from './prepareDeck.js';
 import { playAudioAndStartAnimations } from '../connection/playAudioAndStartAnimations.js';
+import { getCallerTag } from '../callerTag.js';
 
 export function initializeDeckForRole() {
   if (!isBrowser()) return;
-
+  try { console.log(getCallerTag()); } catch {}
   const root = document.getElementById('game-board');
   if (!root) return;
 

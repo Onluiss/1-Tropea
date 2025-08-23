@@ -2,9 +2,11 @@
 "use strict";
 
 import { isBrowser } from '../utils/isBrowser.js';
+import { getCallerTag } from '../callerTag.js';
 
 export function ensureTalonCounter() {
   if (!isBrowser()) return null;
+  try { console.log(getCallerTag()); } catch {}
   const board = document.getElementById('game-board');
   if (!board) return null;
 

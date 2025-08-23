@@ -2,10 +2,11 @@
 
 import { isBrowser } from '../utils/isBrowser.js';
 import { updateTalonCounter } from '../contatore/updateTalonCounter.js';
+import { getCallerTag } from '../callerTag.js';
 
 export function prepareDeck() {
   if (!isBrowser()) return;
-
+  try { console.log(getCallerTag()); } catch {}
   const doc  = document;
   const root = doc.getElementById('game-board');
   if (!root) return;

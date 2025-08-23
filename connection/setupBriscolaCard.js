@@ -4,7 +4,7 @@
 import { isBrowser } from '../utils/isBrowser.js';
 import { state } from '../state.js';
 import { shuffle } from '../utils/shuffle.js';
-import { cardImages } from '../constants/constants.js';
+import { cardImages } from '../constants/cardImages.js';
 import { publish } from '../utils/publish.js';
 import { assignCreatorHand } from '../hand/assignCreatorHand.js';
 
